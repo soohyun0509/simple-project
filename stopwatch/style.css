@@ -1,0 +1,53 @@
+:root {
+    --color-white: #ffffff;
+    --color-pink: #ffb6c1;
+    --height-button: 60px;
+    --width-button: 150px;
+    --size-buttonfont: 28px;
+    --size-margin: 20px;
+    --base-space: 5px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    color: var(--color-white);
+    background-color: var(--color-pink);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons{
+    cursor: pointer;
+    width: var(--width-button);
+    height: var(--height-button);
+    font-size: var(--size-buttonfont);
+    border-color: var(--color-white);
+    border: solid;
+    border-width: 2px;
+    border-radius: var(--base-space);
+    color: var(--color-white);
+    background: transparent;
+    margin-left: var(--size-margin);
+    margin-top: var(--size-margin);
+    
+    
+}
+
+.buttons:hover {
+    background-color: var(--color-white);
+    color: var(--color-pink);
+    transition: 0.7s;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: var(--size-margin);
+}
+
+p {
+    font-size: var(--size-buttonfont);
+}
