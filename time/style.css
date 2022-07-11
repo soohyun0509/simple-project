@@ -1,11 +1,22 @@
 body{
-    
     background-color: black;
 }
 
 
 
-div {
+.clock{
     color: aquamarine;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
+    /*transform - 요소의 크기, 위치, 모양을 변경시켜줌
+    translate은 transform의 위치이동 기능담당임
+    transform 안넣으면 중앙정렬이 되긴하는데 중앙정렬시키려는 요소의 왼쪽윗꼭짓점이 중앙에 오는거기때문에
+    완전 중앙정렬아님*/
+
+    font-family: fantasy;
+    letter-spacing: 6px;
 }
