@@ -1,0 +1,45 @@
+:root {
+    --size-margin: 20px;
+    --width-border: 1px;
+}
+
+body {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: solid;
+    border-width: var(--width-border);
+    padding: var(--size-margin);
+}
+
+.result {
+    width:400px;
+    height: 50px;
+    border-color: black;
+    border: solid;
+    border-width: var(--width-border);
+}
+button {
+    cursor: pointer;
+    width: 100px;
+    height: 60px;
+    font-size: 30px;
+    margin-top: var(--size-margin);
+    margin-right: 10px;
+}
+
+.btn-sign {
+    background-color: #b2c6eb;
+   
+}
+
+.btn-num {
+    background-color: #f0f0ed;
+}
+
+.btn-equ {
+    background-color: #1e90ff;
+    display: inline-block;
+    height: 50px;
+}
