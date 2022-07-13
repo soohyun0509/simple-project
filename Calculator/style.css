@@ -8,26 +8,41 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: solid;
+    border: 1px solid #ddd;
     border-width: var(--width-border);
     padding: var(--size-margin);
 }
 
 .result {
-    width:400px;
-    height: 50px;
-    border-color: black;
-    border: solid;
-    border-width: var(--width-border);
+    height: 100px;
+    width: 450px;
+    border: 1px solid #aaa;
+    
+    transition: none;
 }
 button {
     cursor: pointer;
     width: 100px;
     height: 60px;
     font-size: 30px;
+    border: 1px solid #ddd;
     margin-top: var(--size-margin);
     margin-right: 10px;
+    transition: border-color 1s ease, box-shasow 1s, background-color 1s; 
+} /*transition: 적용할 속성, duration, delay*/
+
+.btn-sign:hover,
+.btn-num:hover,
+.btn-equ:hover {
+    border-color: #ccc;
+    box-shadow: 1px 2px 5px 1px rgb(62, 62, 62);
 }
+
+
+.btn-num:hover {
+    background-color: rgb(201, 196, 196);
+}
+
 
 .btn-sign {
     background-color: #b2c6eb;
@@ -39,7 +54,5 @@ button {
 }
 
 .btn-equ {
-    background-color: #1e90ff;
-    display: inline-block;
-    height: 50px;
+    background-color: #4d89eb;
 }
