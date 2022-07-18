@@ -10,24 +10,41 @@
 // 처음에 div로 아예 만들어줬는데...
 
 
-let main= document.querySelector('.result');
-let sign= document.querySelector('.btn-sign');
-let num= document.querySelector('.btn-num');
+let numone= '';
+let numtwo= '';
+let sign= '';
+let $sign= document.querySelector('.btn-sign');
+let $result= document.querySelector('.result').value;
 
-function btn_click{
-    if()
-    
-} 
-
-document.getElementById('#one').addEventListener('click', )
-
-
-const onClickNumber = (number) => () => {
-    if (operator) {
-      numTwo += number;
-    } else {
-      numOne += number;
-    }
-    console.log(numOne, numTwo);
-    $result.value += number;
+function numbtnClick() {
+  if(sign == true) {
+    numtwo += 'number';
+  } else {
+    numone += 'number';
   }
+  console.log(numone, numtwo);
+  return $result;
+}
+
+
+document.querySelector('#one').addEventListener('click', numbtnClick);
+document.querySelector('#two').addEventListener('click', numbtnClick('2'));
+document.querySelector('#three').addEventListener('click', numbtnClick('3'));
+document.querySelector('#four').addEventListener('click', numbtnClick('4'));
+document.querySelector('#five').addEventListener('click', numbtnClick('5'));
+document.querySelector('#six').addEventListener('click', numbtnClick('6'));
+document.querySelector('#seven').addEventListener('click', numbtnClick('7'));
+document.querySelector('#eight').addEventListener('click', numbtnClick('8'));
+document.querySelector('#nine').addEventListener('click', numbtnClick('9'));
+document.querySelector('#zero').addEventListener('click', numbtnClick('0'));
+
+
+
+function signbtnClick(signal) {
+  //sign= signal;
+  //signal= $sign.value
+  if(numone == true && numtwo == false) {
+    return $result.value;
+  }
+}
+
