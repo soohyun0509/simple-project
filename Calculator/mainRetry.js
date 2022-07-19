@@ -1,13 +1,13 @@
-'use strict';
+
 let $calculator= document.querySelector('.calculator');
 let $result= document.querySelector('.result');
 let $keys= document.querySelector('.calculator__keys');
 
-$keys.addEventListener('click', event => {
-    // if(!event.target.closset('button')) {
-    //      return;
-    // }
-    let key= event.target;
+$keys.addEventListener('click', e => {
+    if(!e.target.closest('button')) {
+        return;
+    }  
+    let key= e.target; // key = $keys.addEventListener 
     let keyvalue= key.textContent;
     let resultvalue= $result.textContent;
     let {type}= key.dataset;
@@ -36,7 +36,7 @@ $keys.addEventListener('click', event => {
         signkeys.forEach(element => {
             element.dataset.state= ''
         })
-        // key.dataset.state= 'selected';
+        key.dataset.state= 'selected';
         $calculator.dataset.firstnumber= resultvalue;
         $calculator.dataset.sign= key.dataset.key;
     }
@@ -50,8 +50,8 @@ $keys.addEventListener('click', event => {
         const firstNumber = $calculator.dataset.firstNumber;
         const sign = $calculator.dataset.sign;
         const secondNumber = resultvalue;
-        const result = calculate(firstNumber, sign, secondNumber);
-        $result.textContent = parseFloat(result.toFixed(7));
+        const input = calculate(firstNumber, sign, secondNumber);
+        $result.textContent = parseFloat(input.toFixed(7));
     }
 
     $calculator.dataset.previousKeyType = type;

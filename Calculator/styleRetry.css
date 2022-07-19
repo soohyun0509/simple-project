@@ -43,9 +43,7 @@ button{
     color: #2c5e98;
 }
 
-.btn-sign,
-.btn-num,
-.btn-equal {
+.btn-item {
     background-color: #94bbe9;
     border: none;
     padding: 16px;
@@ -59,22 +57,22 @@ button{
 
 }
 
-.btn-sign:hover,
-.btn-num:hover,
+
+.btn-item:hover,
 .btn-equal:hover {
     opacity: 0.7; /*불투명성*/
     cursor: pointer;
 }
 
-.btn-sign {
+.btn-item[data-type="sign"] {
     background-color: #6eabf2;
 }
 
-.btn-num.zero {
+.btn-item.zero {
     border-radius: 0 0 0 20px;
 }
 
-.btn-num.equal {
+.btn-item.equal {
     grid-column-start: 4; /*칸수로 세고 끝까지 가게 하고싶으면 칸수보다 하나더를 end로 적으면 되는건가...*/
     grid-column-end: 5;
     grid-row-start: 2;
