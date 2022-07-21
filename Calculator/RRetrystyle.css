@@ -61,11 +61,11 @@ button{
     cursor: pointer;
 }
 
-#btn-operator{
+.btn-item[data-type= "operator"]{
     background-color: #6eabf2;
 }
 
-.btn-item[data-sign= "zero"]{
+.btn-item.zero{
     border-radius: 0 0 0 20px;
 }
 
