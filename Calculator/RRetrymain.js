@@ -11,8 +11,9 @@ function numClick(event) {
     const $type= key.dataset.type; // 얘는 또 type 안붙이면 안나와...뭐야 진짜...
     const previousKey= $calculator.dataset; //이거 진짜 정말 진심 모르겠어...
     //이거 해결 못하면 절대 못할것같아...
-    const $operator= key.dataset.sign;
-    
+    const $operator= key.dataset;
+    console.log(previousKey);
+
     switch($type) {
         case 'a_reset':
              $input.textContent= '0'; //result= ~~은 안됨 내 생각엔 const로 설정해놔서 변수명으로 넣어주면 안되는듯
